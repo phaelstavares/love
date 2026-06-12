@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te amo!</title>
+    <style>
+        /* Importando fontes sofisticadas */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Fundo de seda texturizada */
+            background-color: #1a0a0a;
+            background-image: 
+                url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMzMDAwMDAiIGZpbGwtb3BhY2l0eT0iMC4yIj48cGF0aCBkPSJNMCAwaDQwdjQwSDBWMHptMjAgMjBoMjB2MjBIMjBWMjB6TTAgMjBoMjB2MjBIMFYyMHoyMCAwaDIwdjIwSDIwVjB6Ii8+PC9nPjwvZz48L3N2Zz4='),
+                radial-gradient(circle at center, #660000 0%, #330000 70%, #1a0a0a 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #f5e6da; /* Tom champanhe claro para o texto */
+            font-family: 'Raleway', sans-serif;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Container Principal Ornamentado */
+        .main-container {
+            background: rgba(40, 5, 5, 0.85); /* Vermelho escuro profundo e translúcido */
+            backdrop-filter: blur(8px);
+            border-radius: 25px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+            border: 2px solid #b38600; /* Borda dourada sutil */
+            box-shadow: 0 15px 50px rgba(102, 0, 0, 0.6);
+            z-index: 2;
+            position: relative;
+            animation: fadeInScale 1.2s ease-out;
+        }
+
+        /* Detalhe Decorativo Superior (Vinha dourada) */
+        .main-container::before {
+            content: "";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 30px;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTYuNSAzYy0xLjc0IDAtMy40MS44MS00LjUgMi4wOUMxMC45MSAzLjgxIDkuMjQgMyA3LjUgM0MyLjQyIDMgMCA3LjQyIDAgMTNjMCAyLjEyIDEuMTUgNC4yNCAyLjk0IDYuMTFDMi45NCAxOS4xMSAxMiAyNCAxMiAyNHM5LjA2LTQuODkgOS4wNi00Ljg5QzIyLjg1IDE3LjI0IDI0IDE1LjEyIDI0IDEzYzAtNS41OC00LjQyLTEwLTEwLTEweiIgZmlsbD0iI2IzODYwMCIvPjwvc3ZnPg==');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.9) translateY(20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #d4af37; /* Dourado */
+            font-size: 2.3rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+        }
+
+        .subtitle {
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #c9a96e; /* Dourado mais suave */
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+        }
+
+        /* Espaço para a Foto com Moldura Luxuosa */
+        .photo-frame {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            margin-bottom: 35px;
+            padding: 8px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #b38600, #ffd700, #b38600); /* Gradiente dourado */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: transform 0.4s ease;
+        }
+
+        .photo-frame:hover {
+            transform: scale(1.02);
+        }
+
+        .photo-container {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid #280505;
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* "Inscrição" na moldura */
+        .photo-caption {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #d4af37;
+            color: #280505;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            white-space: nowrap;
+        }
+
+        /* O Textinho - Como um Pergaminho Escuro */
+        .love-letter {
+            background: rgba(26, 10, 10, 0.5);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 2px solid #b38600;
+            border-right: 2px solid #b38600;
+            text-align: left;
+            margin-bottom: 35px;
+            position: relative;
+        }
+
+        /* Aspas decorativas */
+        .love-letter::before, .love-letter::after {
+            content: "“";
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: rgba(179, 134, 0, 0.2);
+            position: absolute;
+        }
+
+        .love-letter::before { top: -20px; left: 10px; }
+        .love-letter::after { content: "”"; bottom: -60px; right: 10px; }
+
+        .love-letter p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            font-weight: 300;
+            font-size: 1rem;
+        }
+
+        .love-letter p强 {
+            font-weight: 600;
+            color: #ffd700;
+        }
+
+        /* Rodapé com Elemento de Joia */
+        .footer-details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+            border-top: 1px solid rgba(179, 134, 0, 0.3);
+            padding-top: 20px;
+        }
+
+        .gemstone {
+            width: 12px;
+            height: 12px;
+            background: radial-gradient(circle at 30% 30%, #ff4d4d, #990000);
+            border-radius: 50%;
+            box-shadow: 0 0 10px #ff0000;
+            position: relative;
+        }
+
+        .gemstone::after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+        }
+
+        .footer-note {
+            font-size: 0.8rem;
+            color: #c9a96e;
+            font-weight: 300;
+        }
+
+        /* Partículas sutis de "brilho dourado" no fundo */
+        #sparkles {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Canvas para partículas de brilho -->
+    <canvas id="sparkles"></canvas>
+
+    <!-- Container Principal -->
+    <div class="main-container">
+        <h1>Paulo,</h1>
+        <div class="subtitle">meu amor eterno <3</div>
+
+        <!-- Foto com Moldura -->
+        <div class="photo-frame">
+            <div class="photo-container">
+                <!-- COLOQUE O LINK OU NOME DA SUA FOTO AQUI -->
+                <img src="./img/20260426_083330.jpg" alt="Nossa Foto">
+            </div>
+            <div class="photo-caption">Nosso Momento Sagrado</div>
+        </div>
+
+        <!-- O Textinho Responsivo -->
+        <div class="love-letter">
+            <p><strong>Meu amor Paulo,</strong></p>
+            <p>Há sentimentos que as palavras mal conseguem expressar, e o que eu sinto por você é um deles. É algo profundo, intenso e que preenche cada espaço do meu coração. Ter você ao meu lado é como encontrar um tesouro que eu nem sabia que estava procurando, mas que agora não consigo imaginar minha vida sem.</p>
+            <p>Neste dia de hoje (12/06/2026), eu não quero apenas celebrar uma data, mas a nossa história. Cada risada, cada abraço, cada momento simples que se torna extraordinário porque você está nele. Você traz luz, paixão e uma felicidade genuína para os meus dias.</p>
+            <p>Obrigado por ser meu companheiro e o grande amor da minha vida. Que o nosso amor continue crescendo, forte e belo, hoje e por todos os dias que virão.</p>
+            <p><strong>Eu te amo além das palavras, obrigado por tanto e por tudo!</strong></p>
+        </div>
+
+        <!-- Detalhes do Rodapé -->
+        <div class="footer-details">
+
+            <div class="footer-note">Com muito amor e carinho, <br>Raphael <3</div>
+        </div>
+    </div>
+
+    <script>
+        // Sistema simples de partículas de brilho (sparkles)
+        const canvas = document.getElementById('sparkles');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let particles = [];
+
+        function init() {
+            resize();
+            for (let i = 0; i < 50; i++) {
+                particles.push(createParticle());
+            }
+            animate();
+        }
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+
+        function createParticle() {
+            return {
+                x: Math.random() * width,
+                y: Math.random() * height,
+                size: Math.random() * 2 + 0.5,
+                opacity: Math.random(),
+                speedY: Math.random() * -0.5 - 0.1,
+                blinkSpeed: Math.random() * 0.02 + 0.01
+            };
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            
+            particles.forEach(p => {
+                p.y += p.speedY;
+                p.opacity -= p.blinkSpeed;
+
+                if (p.opacity <= 0 || p.y < 0) {
+                    p.x = Math.random() * width;
+                    p.y = height + Math.random() * 50;
+                    p.opacity = Math.random();
+                }
+
+                ctx.fillStyle = `rgba(212, 175, 55, ${p.opacity})`; // Cor dourada com opacidade
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fill();
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', resize);
+        init();
+    </script>
+</body>
+</html>
